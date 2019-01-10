@@ -1,0 +1,115 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+
+$font-headings: Poppins, sans-serif;
+$font-body: "Open Sans", sans-serif;
+
+$primary-color: hsl(322, 100%, 66%);
+$secondary-color: hsl(265, 100%, 66%);
+
+$neutral-light: hsl(214, 64%, 98%);
+$neutral-mid: hsl(208, 11%, 55%);
+$neutral-dark: hsl(192, 100%, 9%);
+
+
+/*  */
+
+body {
+  font: 18px $font-body;
+  background-image: linear-gradient(to bottom right, $primary-color, $secondary-color);
+}
+
+.heading {
+  color: $neutral-dark;
+  font: 24px $font-headings;
+  font-weight: 600;
+}
+.paragraph {
+  color: $neutral-mid;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 5% 3%;
+  .logo {
+    left: 0;
+    max-width: 100%;
+    height: auto;
+    background-color: white;
+  }
+  button{
+    right: 0;
+    width: 150px;
+    background-color: $neutral-light;
+  }
+}
+
+section {
+  width: 100%;
+  margin: 20px 0 20px 0;
+  height: 90vh;
+  button.get-started {
+    background-color: $primary-color;
+    color: $neutral-light;
+    width: 200px;
+    height: 50px;
+    align-self: center;
+    margin: 5px;
+  }
+}
+
+section.intro {
+  padding: 0px 25%;
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+    width: inherit;
+  }
+  img {
+    width: inherit;
+  }
+}
+
+
+section.half-img-half-text {
+  display: flex;
+  flex-direction: row;
+  padding: 0px 5%;
+  .section-image {
+    flex-basis: 50%;
+    display: flex;
+    width: inherit;
+    height: auto;
+    background-image: url("./images/illustration-your-users.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    img{
+      width: inherit;
+      height: auto;
+    }
+  }
+  .section-content {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+footer {
+  width: 100%;
+  position: relative;
+  bottom: 0;
+}
