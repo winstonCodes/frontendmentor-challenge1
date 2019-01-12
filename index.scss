@@ -18,62 +18,100 @@ $neutral-mid: hsl(208, 11%, 55%);
 $neutral-dark: hsl(192, 100%, 9%);
 
 
-/*  */
+/* General Styles */
 
 body {
-  font: 18px $font-body;
-  background-image: linear-gradient(to bottom right, $primary-color, $secondary-color);
+  background-color: $neutral-light;
+  overflow-x: hidden;
 }
 
 .heading {
   color: $neutral-dark;
-  font: 24px $font-headings;
+  font-family: $font-headings;
   font-weight: 600;
+  margin-bottom: 10px;
 }
+h2.heading {
+  font-size: 30px;
+}
+h3.heading {
+  font-size: 24px;
+}
+h4.heading {
+  font-size: 20px;
+}
+
 .paragraph {
+  font: 18px $font-body;
   color: $neutral-mid;
+  margin-bottom: 20px;
 }
+
+section {
+  width: 100%;
+  margin: 20px 0 20px 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Header */
 
 header{
   display: flex;
   justify-content: space-between;
   width: 100%;
   padding: 5% 3%;
+  position: absolute;
   .logo {
     left: 0;
     max-width: 100%;
     height: auto;
-    background-color: white;
   }
   button{
     right: 0;
     width: 150px;
-    background-color: $neutral-light;
+    background-color: white;
+    color: $secondary-color;
+    border-radius: 3px;
+    border: 1px $primary-color solid;
+    box-shadow: 0px 3px 3px 3px rgba(0,0,0,0.1);
   }
 }
 
-section {
-  width: 100%;
-  margin: 20px 0 20px 0;
-  height: 90vh;
-  button.get-started {
-    background-color: $primary-color;
-    color: $neutral-light;
-    width: 200px;
-    height: 50px;
-    align-self: center;
-    margin: 5px;
-  }
+/* Intro - Background Shapes */
+
+.svg-corner{
+  transform: rotate(-35deg);
+  transform-origin: 15% -50%;
+  fill: linear-gradient(to bottom right, $primary-color, $secondary-color);
+  position: absolute;
+  z-index: -1;
 }
+.svg-intro{
+  fill: white;
+  position: absolute;
+  z-index: -2;
+  transform: rotate(-35deg);
+  transform-origin: 30% 50%;
+}
+
+/* Intro Styles */
 
 section.intro {
-  padding: 0px 25%;
-  .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  padding: 50px 25%;
+  margin-top: 0px;
+  justify-content: center;
+  .section-content {
     text-align: center;
-    background-color: white;
+    // background-color: white;
     width: inherit;
   }
   img {
@@ -81,8 +119,19 @@ section.intro {
   }
 }
 
+button.get-started {
+  background-color: $primary-color;
+  color: $neutral-light;
+  width: 200px;
+  height: 50px;
+  align-self: center;
+  margin: 5px;
+  border-radius: 3px;
+}
 
-section.half-img-half-text {
+/* Media/Content Section */
+
+.half-img-half-text {
   display: flex;
   flex-direction: row;
   padding: 0px 5%;
@@ -105,11 +154,112 @@ section.half-img-half-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 0 10%;
   }
 }
 
+/* Call-to-Action */
+
+.call-to-action {
+  height: 60vh;
+  padding: 70px;
+  margin-bottom: 100px;
+  font: inherit;
+  justify-content: center;
+  align-items: center;
+  .section-content{
+    margin-bottom: 0;
+    width: inherit;
+    height: inherit;
+    max-width: 800px;
+    text-align: center;
+    background-color: white;
+    justify-content: center;
+    align-self: center;
+    box-shadow: 0px 10px 20px 15px rgba(0,0,0,0.1);
+  }
+}
+
+/* Footer */
+
 footer {
   width: 100%;
+  height: 50vh;
   position: relative;
   bottom: 0;
+  padding: 0 50px;
+  color: $neutral-light;
+  background-color: $neutral-dark;
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  .social-icons {
+    margin-bottom: 25px;
+  }
+  i {
+    margin-right: 15px;
+  }
+  a{
+    color: inherit;
+    text-decoration: none;
+  }
+  a:hover {
+    color: rgba(255,255,255,1.0);
+  }
+  .grid-left{
+    grid-column: 1;
+    grid-row: 2/4;
+    .copyright {
+      font: 10px $font-body;
+      color: rgba(255,255,255,0.8);
+    }
+  }
+  .grid-middle{
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    justify-content: space-around;
+    text-decoration: none;
+    list-style: none;
+    nav li {
+      margin-bottom: 20px;
+      font: 12px $font-body;
+      color: rgba(255,255,255,0.8);
+    }
+  }
+  .grid-right{
+    grid-column: 3;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    h5 {
+      font: 18px $font-headings;
+      font-weight: 600;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+    input{
+      width: 100%;
+      height: 3em;
+      border-radius:5px;
+    }
+    .paragraph{
+      font-size: 11px;
+      color: rgba(255,255,255,0.8);
+    }
+  }
+}
+
+button.subscribe {
+  background-color: $primary-color;
+  color: $neutral-light;
+  width: 150px;
+  height: 40px;
+  float: right;
+  margin: 5px;
+  border-radius: 3px;
+  font: 12px $font-body;
+  font-weight: 400;
+  align-self: flex-end;
 }

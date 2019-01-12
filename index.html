@@ -1,56 +1,137 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Huddle Landing Page</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="output.css">
-  </head>
+  <title>Huddle Landing Page</title>
 
-  <body>
-    <header>
-      <img class="logo" src="./images/logo.svg"><button>Try It Free</button>
-    </header>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="output.css">
+</head>
 
-    <section class="intro">
-      <div class="content">
-        <img src="./images/illustration-mockups.svg" alt="">
+<body>
+  <header>
+    <img class="logo" src="./images/logo.svg">
+    <button>Try It Free</button>
+  </header>
 
-        <h3 class="heading">Build The Community Your Fans Will Love</h3>
-        <p class="paragraph">  Huddle re-imagines the way we build communities. You have a voice, but so does your audience.
-          Create connections with your users as you engage in genuine discussion.</p>
+  <section class="intro">
+    <svg width="100vw" height="100vh" class="svg-corner">
+      <defs>
+        <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" style="stop-color:hsl(322, 100%, 66%);stop-opacity:1" />
+          <stop offset="100%" style="stop-color:hsl(265, 100%, 66%);stop-opacity:1" />
+        </linearGradient>
+      </defs>
+      <rect fill="url(#gradient)" x="0" y="0" width="100vw" height="100vh" rx="50" ry="50" />
+    </svg>
+    <svg width="200vw" height="100vh" class="svg-intro">
+      <rect x="0" y="0" width="200vw" height="60vh" rx="50" ry="50" />
+    </svg>
+    <img src="./images/illustration-mockups.svg" alt="">
+    <div class="section-content">
 
-        <button class="get-started">Get Started For Free</button>
-      </div>
-    </section>
+      <h3 class="heading">Build The Community Your Fans Will Love</h3>
+      <p class="paragraph"> Huddle re-imagines the way we build communities. You have a voice, but so does your audience.
+        Create connections with your users as you engage in genuine discussion.</p>
 
-    <section class="half-img-half-text">
-      <div class="section-image">
-        <!-- <img src="./images/illustration-your-users.svg" alt=""> -->
-      </div>
-      <div class="section-content">
-        <h4>Flowing Conversations</h4>
-        <p>You wouldn't paginate a conversation in real life, so why do it online? Our threads have
+      <button class="get-started">Get Started For Free</button>
+    </div>
+  </section>
+
+  <section class="half-img-half-text">
+    <div class="section-image"></div>
+    <div class="section-content">
+      <h4 class="heading">Flowing Conversations</h4>
+      <p class="paragraph">You wouldn't paginate a conversation in real life, so why do it online? Our threads have
         just-in-time loading for a more natural flow.</p>
-        <h4>Grow Together</h4>
-        <p>Generate meaningful discussions with your audience and build a strong, loyal community. Think of
+      <h4 class="heading">Grow Together</h4>
+      <p class="paragraph">Generate meaningful discussions with your audience and build a strong, loyal community. Think of
         the insightful conversations you miss out on with a feedback form.</p>
-        <h4>Your Users</h4>
-        <p>Fully featured 30-day free trial - no credit card required</p>
-      </div>
-    </section>
+      <h4 class="heading">Your Users</h4>
+      <p class="paragraph">It takes no time at all to integrate Huddle with your app's authentication solution. This means, once
+        signed in to your app, your users can start chatting immediately.</p>
+    </div>
+  </section>
 
+  <section class="call-to-action">
+    <div class="section-content">
+      <h2 class="heading">Try It Free</h2>
+      <p class="paragraph">Fully featured 30-day free trial - no credit card required <br><br></p>
+      <button class="get-started">Get Started For Free</button>
+    </div>
+  </section>
 
-      <footer>
-        <p class="attribution">
-          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-          Coded by <a href="#">Your Name Here</a>.
-        </p>
-      </footer>
-  </body>
+  <footer>
+
+    <div class="grid-left">
+      <p class="social-icons">
+        <i class="fab fa-facebook-square fa-2x"></i>
+        <i class="fab fa-instagram fa-2x"></i>
+        <i class="fab fa-twitter-square fa-2x"></i>
+      </p>
+      <p class="copyright">
+        &copy; Copyright 2019 Huddle. All rights reserved.
+      </p>
+      <p class="copyright">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="https://github.com/winstoncodes">Winston</a>.
+      </p>
+    </div>
+
+    <div class="grid-middle">
+      <nav>
+        <li>
+          <a href="#">
+            About Us
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            What We Do
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            FAQ
+          </a>
+        </li>
+      </nav>
+      <nav>
+        <li>
+          <a href="#">
+            Career
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Blog
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            Contact Us
+          </a>
+        </li>
+      </nav>
+    </div>
+
+    <div class="grid-right">
+      <h5 class="">Subscribe</h5>
+      <p class="paragraph">
+        To receive tips on how to grow your community, sign up to our weekly newsletter. We’ll never send you spam or pass on your email address
+      </p>
+      <form class="" action="index.html" method="post">
+        <input type="text" name="" value="">
+        <button type="button" name="button" class="subscribe">Subscribe</button>
+      </form>
+    </div>
+
+  </footer>
+</body>
 
 </html>
