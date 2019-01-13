@@ -1,0 +1,139 @@
+/* Media Queries */
+
+@media (max-width: 800px) {
+  section {
+    margin: 0;
+  }
+
+  .intro {
+    padding: 50px 15% 0;
+  }
+
+  .half-img-half-text{
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    // padding: 0 15%;
+    height: max-content;
+    .section-image {
+      height: 30vh;
+      margin-bottom: 20%;
+    }
+  }
+
+  .call-to-action{
+    padding: 15vh 20px;
+    .section-content{
+      padding:20px;
+      .paragraph {
+        margin-bottom: 10px;
+        line-height: 1em;
+      }
+    }
+  }
+
+  footer {
+    height: max-content;
+  }
+
+}
+
+@media (max-width:600px) {
+
+  h2.heading {
+    font-size: 26px;
+  }
+  h3.heading {
+    font-size: 20px;
+  }
+  h4.heading {
+    font-size: 16px;
+  }
+
+  .paragraph {
+    font-size: 14px;
+  }
+
+header {
+  .logo {
+    transform: scale(0.8);
+  }
+  button{
+    transform: scale(0.9);
+  }
+}
+
+  .call-to-action{
+    // padding: 20% 20px;
+    .section-content{
+      padding:20px;
+
+    }
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: max-content;
+    .social-icons {
+      margin-bottom: 5px;
+      transform: scale(0.8);
+    }
+    .grid-header{
+      justify-content: center;
+      align-content: center;
+      height: 20vh;
+      img {
+        align-self: center;
+        transform: scale(1.3);
+      }
+    }
+    .grid-left {
+      position: absolute;
+      bottom: 0;
+      margin-bottom: 10px;
+      align-self: center;
+    }
+    .grid-middle{
+      flex-direction: column;
+      align-content: flex-start;
+      text-align: left;
+      nav li {
+        font-size: 14px;
+      }
+    }
+    .grid-right {
+      margin-bottom: 100px;
+      h5 {
+        margin-bottom: 5px;
+      }
+    }
+
+    button.subscribe {
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 440px) {
+  .paragraph {
+    font-size: 12px;
+  }
+
+  header {
+    height: max-content;
+    padding-bottom: 0;
+    .logo {
+      transform: scale(0.6) translateX(-30px);
+    }
+    button{
+      transform: scale(0.8);
+
+    }
+  }
+
+  .call-to-action{
+    padding: 15vh 20px;
+  }
+}

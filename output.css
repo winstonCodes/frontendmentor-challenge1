@@ -58,7 +58,7 @@ header {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 5% 3%;
+  padding: 5vh 3%;
   position: absolute;
 }
 header .logo {
@@ -147,7 +147,6 @@ button.get-started {
   height: 60vh;
   padding: 70px;
   margin-bottom: 100px;
-  font: inherit;
   justify-content: center;
   align-items: center;
 }
@@ -257,124 +256,6 @@ button.subscribe {
   font: 12px "Open Sans", sans-serif;
   font-weight: 400;
   align-self: flex-end;
-}
-
-@media (max-width: 800px) {
-  section {
-    margin: 0;
-  }
-
-  .intro {
-    padding: 50px 15% 0;
-  }
-
-  .half-img-half-text {
-    flex-direction: column;
-    text-align: center;
-    justify-content: space-between;
-    height: max-content;
-  }
-  .half-img-half-text .section-image {
-    height: 30vh;
-    margin-bottom: 20%;
-  }
-
-  .call-to-action {
-    padding: 15vh 20px;
-  }
-  .call-to-action .section-content {
-    padding: 20px;
-  }
-  .call-to-action .section-content .paragraph {
-    margin-bottom: 10px;
-    line-height: 1em;
-  }
-
-  footer {
-    height: max-content;
-  }
-}
-@media (max-width: 600px) {
-  h2.heading {
-    font-size: 26px;
-  }
-
-  h3.heading {
-    font-size: 20px;
-  }
-
-  h4.heading {
-    font-size: 16px;
-  }
-
-  .paragraph {
-    font-size: 14px;
-  }
-
-  header .logo {
-    width: 200px;
-    height: 33px;
-  }
-  header button {
-    width: 125px;
-  }
-
-  .call-to-action .section-content {
-    padding: 20px;
-  }
-
-  footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    height: max-content;
-  }
-  footer .social-icons {
-    margin-bottom: 5px;
-  }
-  footer .grid-left {
-    position: absolute;
-    bottom: 0;
-    align-self: center;
-  }
-  footer .grid-middle {
-    flex-direction: column;
-    align-content: flex-start;
-    text-align: left;
-  }
-  footer .grid-right {
-    margin-bottom: 100px;
-  }
-  footer .grid-right h5 {
-    margin-bottom: 5px;
-  }
-  footer button.subscribe {
-    width: 100%;
-    border: 0;
-  }
-}
-@media (max-width: 440px) {
-  .paragraph {
-    font-size: 12px;
-  }
-
-  header {
-    height: max-content;
-    padding-bottom: 0;
-  }
-  header .logo {
-    width: 150px;
-    height: 25px;
-  }
-  header button {
-    width: 125px;
-    height: 30px;
-  }
-
-  .call-to-action {
-    padding: 15vh 20px;
-  }
 }
 
 /*# sourceMappingURL=output.css.map */
