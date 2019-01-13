@@ -78,18 +78,20 @@ header button {
 
 /* Intro - Background Shapes */
 .svg-corner {
-  transform: rotate(-35deg) translate(60%, -25%);
-  fill: linear-gradient(to bottom right, #ff52bf, #9a52ff);
   position: absolute;
   z-index: -1;
+}
+.svg-corner rect {
+  transform: translateX(50%) rotate(-35deg);
 }
 
 .svg-intro {
   fill: white;
   position: absolute;
   z-index: -2;
-  transform: rotate(-35deg);
-  transform-origin: 30% 50%;
+}
+.svg-intro rect {
+  transform: translateY(49%) translateX(10%) rotate(-35deg);
 }
 
 /* Intro Styles */
@@ -97,10 +99,10 @@ header button {
   padding: 50px 25%;
   margin-top: 0px;
   justify-content: center;
+  width: 100%;
 }
 .intro .section-content {
   text-align: center;
-  width: inherit;
 }
 .intro img {
   width: inherit;
@@ -196,7 +198,9 @@ footer .grid-header {
 footer .grid-header img {
   align-self: flex-end;
   bottom: 0;
-  margin: 20px 0 20px 0;
+  margin: 20px 0 10px 0;
+  width: 132px;
+  height: 33;
 }
 footer .grid-left {
   grid-column: 1;
@@ -285,6 +289,10 @@ button.subscribe {
     margin-bottom: 10px;
     line-height: 1em;
   }
+
+  footer {
+    height: max-content;
+  }
 }
 @media (max-width: 600px) {
   h2.heading {
@@ -301,6 +309,14 @@ button.subscribe {
 
   .paragraph {
     font-size: 14px;
+  }
+
+  header .logo {
+    width: 200px;
+    height: 33px;
+  }
+  header button {
+    width: 125px;
   }
 
   .call-to-action .section-content {
@@ -343,8 +359,21 @@ button.subscribe {
     font-size: 12px;
   }
 
+  header {
+    height: max-content;
+    padding-bottom: 0;
+  }
+  header .logo {
+    width: 150px;
+    height: 25px;
+  }
+  header button {
+    width: 125px;
+    height: 30px;
+  }
+
   .call-to-action {
-    padding: 19vh 20px;
+    padding: 15vh 20px;
   }
 }
 

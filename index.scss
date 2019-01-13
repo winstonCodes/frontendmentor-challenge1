@@ -89,19 +89,24 @@ header{
 
 /* Intro - Background Shapes */
 
+.svg-wrapper{
+  // text-align:center;
+}
+
 .svg-corner{
-  transform: rotate(-35deg) translate(60%, -25%);
-  // transform-origin: 15% -50%;
-  fill: linear-gradient(to bottom right, $primary-color, $secondary-color);
   position: absolute;
   z-index: -1;
+  rect {
+    transform: translateX(50%) rotate(-35deg);
+  }
 }
 .svg-intro{
   fill: white;
   position: absolute;
   z-index: -2;
-  transform: rotate(-35deg);
-  transform-origin: 30% 50%;
+  rect{
+    transform: translateY(49%) translateX(10%) rotate(-35deg);
+  }
 }
 
 /* Intro Styles */
@@ -110,10 +115,11 @@ header{
   padding: 50px 25%;
   margin-top: 0px;
   justify-content: center;
+  width: 100%;
+  // overflow: hidden;
   .section-content {
     text-align: center;
     // background-color: white;
-    width: inherit;
   }
   img {
     width: inherit;
@@ -215,7 +221,9 @@ footer {
     img {
       align-self: flex-end;
       bottom: 0;
-      margin: 20px 0 20px 0;
+      margin: 20px 0 10px 0;
+      width: 132px;
+      height: 33;
 
     }
   }
@@ -309,6 +317,10 @@ button.subscribe {
     }
   }
 
+  footer {
+    height: max-content;
+  }
+
 }
 
 @media (max-width:600px) {
@@ -326,6 +338,16 @@ button.subscribe {
   .paragraph {
     font-size: 14px;
   }
+
+header {
+  .logo {
+    width: 200px;
+    height: 33px;
+  }
+  button{
+    width: 125px;
+  }
+}
 
   .call-to-action{
     // padding: 20% 20px;
@@ -372,7 +394,20 @@ button.subscribe {
     font-size: 12px;
   }
 
+  header {
+    height: max-content;
+    padding-bottom: 0;
+    .logo {
+      width: 150px;
+      height: 25px;
+    }
+    button{
+      width: 125px;
+      height: 30px;
+    }
+  }
+
   .call-to-action{
-    padding: 19vh 20px;
+    padding: 15vh 20px;
   }
 }
